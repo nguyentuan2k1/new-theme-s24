@@ -374,6 +374,19 @@ nav .dropdown-menu li:hover a{
 
 
 
+.cover-btn-login-by-another{
+    margin: 30px 0;
+}
+.forgot-pw p a {
+    color: black;
+}
+.forgot-pw p a:hover {
+    color: #83bb3e;
+}
+
+.login-by-another-btn{
+    margin: 16px 0;
+}
 
 
 
@@ -480,6 +493,23 @@ nav .dropdown-menu li:hover a{
     }
     #footer ul li:last-child {
         border-bottom: none;
+    }
+    .login-by-another-heading span{
+        font-size: 12px;
+        padding: 0 10px ;
+    }
+    .login-by-another-btn{
+        margin: 8px 0;
+    }
+    .login-by-another-heading span{
+        left: 20%;
+    }
+    .cover-login-username{
+        margin: 10px 0;
+    }
+
+    .cover-login-password{
+        margin: 10px 0;
     }
 
 
