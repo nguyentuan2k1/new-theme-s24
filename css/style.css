@@ -215,17 +215,17 @@ nav .dropdown-menu li:hover a{
     position: absolute;top: 5px ;left: 5px
 }
 .top-sale span{
-    background: #ea273a;padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
+    background: var(--primary);padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
 }
 .bottom-sale{
     position: absolute;bottom: 4px;right: 5px;display: flex;float: right;
     gap: 5px;
 }
 .bottom-sale-first{
-    background: #ea273a;padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
+    background: var(--primary);padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
 }
 .bottom-sale-two{
-    background: #ea273a;padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
+    background: var(--primary);padding: 3px 6px;border-radius: 8px 0 8px 0;color: white;
 }
 .cover-product-content{
     padding: 10px;
