@@ -30,7 +30,8 @@
     gap: 40px;
 }
 .top-header-padding-y{
-    padding: 16px 0;
+    padding: 8px 0;
+    padding-top: 16px;
     display: flex;
     align-items: center;
 }
@@ -98,7 +99,8 @@ nav .dropdown-menu li a{
 
 
 nav .dropdown-menu li:hover a{
-    background: yellow !important;
+    background: var(--primary) !important;
+    color: white;
 
 }
 .number-cart {
@@ -106,8 +108,8 @@ nav .dropdown-menu li:hover a{
     position: absolute;
     top: -18px;
     right: -15px;
-    color: #fbfcf9;
-    background: #d0011b;
+    color: var(--primary);
+    background: white;
     /* height: 19px; */
     /* width: 19px; */
     border-radius: 50%;
@@ -136,7 +138,7 @@ nav .dropdown-menu li:hover a{
     top: 50%;
     left: 0;
     right: 0;
-    background-color: #83bb3e;
+    background-color: var(--primary);
     height: 2px;
     z-index: -1;
 }
@@ -144,7 +146,7 @@ nav .dropdown-menu li:hover a{
     background-color: white;
     z-index: 10;
     padding: 0 20px;
-    color: #f99717;
+    color: black;
     font-size: 30px;
     font-weight: 600;
 }
@@ -173,7 +175,7 @@ nav .dropdown-menu li:hover a{
     top: 50%;
     left: 0;
     right: 0;
-    background-color: #005e82;
+    background-color: var(--primary);
     height: 2px;
     z-index: -1;
 
@@ -234,10 +236,10 @@ nav .dropdown-menu li:hover a{
     margin-bottom: 10px;
 }
 .product-name-tag:hover{
-    color: #d0011b;
+    color: var(--primary);
 }
 .is-start{
-    color: yellow;
+    color: #ffc120;
 }
 .sale-top-tag{
     background: #ea273a;padding: 3px 6px;border-radius: 8px 0 8px 0;color: white
@@ -265,7 +267,7 @@ nav .dropdown-menu li:hover a{
     top: 50%;
     left: 0;
     right: 0;
-    background: #005e82;
+    background: var(--primary);
     height: 3px;
     z-index: -1;
     transform: translateY(-100%);
@@ -381,7 +383,7 @@ nav .dropdown-menu li:hover a{
     color: black;
 }
 .forgot-pw p a:hover {
-    color: #83bb3e;
+    color: var(--primary);
 }
 
 .login-by-another-btn{
@@ -582,7 +584,7 @@ nav .dropdown-menu li:hover a{
     .modal-footer{
         display: none;
     }
-    
+
 
 
 }
