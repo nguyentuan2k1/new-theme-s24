@@ -43,6 +43,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
           integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />-->
 
 </head>
 <body>
@@ -58,28 +64,87 @@
         right: 0;
         text-align: center;
     }
-    .owl-dots button{
+
+    .owl-dots button {
         background: #ccc !important;
         height: 11px;
         width: 11px;
-        margin: 0 10px  ;
+        margin: 0 10px;
         border-radius: 50%;
     }
-    .owl-dots button.active{
+
+    .owl-dots button.active {
         background: red !important;
     }
 
 
-
-
-
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css" integrity="sha512-888I2nScRzrb/WNZ3qsa5kiZNmaEsvz8HEVQZRGokIEOj/sMnUlLClqP7itKJYDhXWsmp+1usxoCidSEfW2rWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js" integrity="sha512-/HL24m2nmyI2+ccX+dSHphAHqLw60Oj5sK8jf59VWtFWZi9vx7jzoxbZmcBeeTeCUc7z1mTs3LfyXGuBU32t+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 <!--Header-->
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div style="top: 0% !important;    background: rgba(0,0,0,0.4);" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div style="padding: 20px 20%" class="modal-body">
+                <div class="cover-login-username">
+                    <label style="display: block" > Tài khoản * </label>
+                    <input class="input-field" type="text" name="username">
+
+                </div>
+
+                <div class="cover-login-password">
+                    <label style="display: block"  > Mật khẩu * </label>
+                    <input class="input-field" type="password" name="password" >
+
+                </div>
+
+                <div>
+                    <button style="display: block;width: 100%"> Đăng nhập </button>
+                </div>
+
+                <div>
+                    <p><a href=""> Quên mật khẩu </a>  </p>
+                </div>
+
+                <div class="login-by-another">
+                    <p class="login-by-another-heading"> <span> Hoặc Đăng nhập bằng </span> </p>
+
+                    
+
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--                <button type="button" class="btn btn-primary"> Đăng nhập </button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 <div class="container-fluid top-header">
     <div class="container">
-        <div style="display: flex;flex-wrap: wrap" class="row  top-header-padding-y ">
+        <div style="display: flex;flex-wrap: wrap;border-bottom: 1px solid #34568B" class="row  top-header-padding-y ">
             <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="top-header-left ">
                     <div class="cover-top-left-header col-sm-12 col-md-3 ">
@@ -100,7 +165,7 @@
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="top-header-right">
-                    <button class="top-header-right-btn my-white-text-color">
+                    <button id="btn-login" class="top-header-right-btn my-white-text-color">
                         <i class="fa fa-user" aria-hidden="true"></i> Đăng nhập
                     </button>
 
@@ -125,7 +190,7 @@
 <!--navbar-->
 <div class="container-fluid top-header">
     <div class="container">
-        <nav style="border: none;box-shadow: unset" class="navbar navbar-default top-header  ">
+        <nav style="border: none;box-shadow: unset;padding: 16px 0" class="navbar navbar-default top-header  ">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -138,7 +203,7 @@
                     </button>
 
                     <div style="width:60px;height:60px" class="cover-bottom-header-left-img">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="https://s24.com.vn/store/nhatvinh/home">
                             <img style="width: 100%;" onerror="this.src='img/1573900168No_Logo_logo.svg'"
                                  src="img/8661598251457.jpg" alt="">
                         </a>
@@ -153,13 +218,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="custom-margin-nav"><a href="#" class=" my-white-text-color">Trang chủ</a></li>
                         <li class="dropdown custom-margin-nav">
-                            <a href="#" class="dropdown-toggle  my-white-text-color" data-toggle="dropdown"
+                            <a  href="#" class="dropdown-toggle  my-white-text-color" data-toggle="dropdown"
                                role="button"
                                aria-haspopup="true" aria-expanded="false">Danh mục <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class=""><a href="#"> Danh muc 1 </a></li>
-                                <li class=""><a href="#"> danh muc 2 </a></li>
-                                <li class=""><a href="#">danh muc 3</a></li>
+                                <li class=""><a href="https://s24.com.vn/"> Danh muc 1 </a></li>
+                                <li class=""><a href="https://s24.com.vn/"> danh muc 2 </a></li>
+                                <li class=""><a href="https://s24.com.vn/">danh muc 3</a></li>
                             </ul>
                         </li>
                         <li class="custom-margin-nav"><a class=" my-white-text-color" href="#">Giới thiệu</a></li>
@@ -176,7 +241,7 @@
 
 <!--Body-->
 <div style="width: 100%" class="">
-    <div style="height: 500px;width: 100%" class="main-banner">
+    <div style="" class="main-banner">
         <div style="height: 100%;overflow: hidden" class="owl-carousel">
             <div>
                 <img style="width: 100%;height: 100%;object-fit: cover" src="img/62ac4c808ee4e%20(1).jpg" alt="">
@@ -192,66 +257,625 @@
 
 <div style="margin: 20px 0" class="container-fluid">
     <div class="container">
-        <div style="text-align: center;">  <p class="about-home-heading"> <span style="text-transform: uppercase"> về công ty chúng tôi </span>  </p>    </div>
+        <div style="text-align: center;"><p class="about-home-heading"><span style="text-transform: uppercase"> về công ty chúng tôi </span>
+        </p></div>
         <div class="row">
-            <div class="col-md-6">
-                <div >
-                    <div >
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div>
+                    <div>
                         <div style="height: 100%" class="owl-carousel">
                             <div class="about-home-item">
-                                <img style="height: 360px" src="img/62ac4c808ee4e%20(1).jpg" alt="">
+                                <img style="" src="img/62ac4c808ee4e%20(1).jpg" alt="">
+                                <!--                                <img style="" src="img/gx2.jpg" alt="">-->
+
                             </div>
                             <div class="about-home-item">
-                                <img style="height: 360px" src="img/62ac4c808ee4e.jpg" alt="">
+                                <img style="" src="img/62ac4c808ee4e.jpg" alt="">
+                                <!--                                <img style="" src="img/gx1.jpg" alt="">-->
+
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12 col-xs-12">
 
-                     <p> Công ty Chúng tôi luôn đem đến những ý tưởng sáng tạo hoàn toàn mới, không trùng lắp nhau để mỗi công trình là duy nhất và khác biệt, thể hiện đúng phong cách để bạn hãnh diện khi sở hữu </p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
 
-                        <p> Chúng tôi tự hào khi có nhà xưởng quy mô và uy tín trên 30 năm kinh nghiệm, đội ngũ thợ tay nghề cao sẽ sản xuất và lắp đặt tận nơi những thiết bị nội thất tinh xảo, bền-đẹp với giá gốc tại xưởng cạnh tranh nhất. </p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
 
-                     <p> Bạn sẽ “nhẹ gánh” vì chúng tôi sẽ gánh vác thay bạn từ khâu xin GPXD, thiết kế, thi công, hoàn thiện trang trí nội thất, hoàn công; giúp bạn tiết kiệm thời gian & công sức, loại bỏ phiền phức. Việc của bạn là nhận nhà mới và tận hưởng nó, việc còn lại hãy để chúng tôi lo. </p>
-                    <div class="cover-btn-xem-them">
-                        
-                    </div>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                <div style="text-align: center" class="cover-btn-xem-them">
+                    <a href="https://s24.com.vn/store/nhatvinh">
+                        <button type="button" class="btn btn-info">Xem thêm</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<div style="height: 3000px"></div>
+<div class="container">
+    <div style="text-align: center;"><p class="new-product-heading"><span
+            style="text-transform: uppercase;font-weight: bold"> Sản phẩm mới </span></p></div>
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class=" cover-product">
+
+                <div class="cover-product-img ">
+
+                    <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                    <div class="top-sale">
+                        <span class="sale-top-tag">-20%</span>
+                    </div>
+                    <div class="bottom-sale">
+                        <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                    </div>
+                </div>
+                <div style="" class="cover-product-content">
+                    <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                    </a>
+                    <div style="" class="cover-product-price">
+                        <span class="price-main"> 120.000đ  </span>
+                        <span class="price-delete">  120.000đ  </span>
+                    </div>
+                    <div class="cover-product-rating">
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                        <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="container">
+    <div  class="product-bottom">
+        <div  class="cover-product-bottom-heading">
+            <div  class="row">
+
+                <div class="col-md-6 col-xs-12 col-sm-12">
+                    <p class="product-bottom-heading">
+                 <span>
+                      Sản phẩm
+                  </span>
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 col-sm-12">
+
+                    <div style="" class="cover-product-bottom-category">
+                       <p class="active">
+                             Hello World
+                       </p>
+
+
+                        <p>
+                            Hello World
+                        </p>
+
+                        <p>
+                            Hello World
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cover-product-bottom-product">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class=" cover-product">
+
+                        <div class="cover-product-img ">
+
+                            <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                            <div class="top-sale">
+                                <span class="sale-top-tag">-20%</span>
+                            </div>
+                            <div class="bottom-sale">
+                                <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                            </div>
+                        </div>
+                        <div style="" class="cover-product-content">
+                            <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                            </a>
+                            <div style="" class="cover-product-price">
+                                <span class="price-main"> 120.000đ  </span>
+                                <span class="price-delete">  120.000đ  </span>
+                            </div>
+                            <div class="cover-product-rating">
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class=" cover-product">
+
+                        <div class="cover-product-img ">
+
+                            <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                            <div class="top-sale">
+                                <span class="sale-top-tag">-20%</span>
+                            </div>
+                            <div class="bottom-sale">
+                                <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                            </div>
+                        </div>
+                        <div style="" class="cover-product-content">
+                            <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                            </a>
+                            <div style="" class="cover-product-price">
+                                <span class="price-main"> 120.000đ  </span>
+                                <span class="price-delete">  120.000đ  </span>
+                            </div>
+                            <div class="cover-product-rating">
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class=" cover-product">
+
+                        <div class="cover-product-img ">
+
+                            <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                            <div class="top-sale">
+                                <span class="sale-top-tag">-20%</span>
+                            </div>
+                            <div class="bottom-sale">
+                                <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                            </div>
+                        </div>
+                        <div style="" class="cover-product-content">
+                            <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                            </a>
+                            <div style="" class="cover-product-price">
+                                <span class="price-main"> 120.000đ  </span>
+                                <span class="price-delete">  120.000đ  </span>
+                            </div>
+                            <div class="cover-product-rating">
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class=" cover-product">
+
+                        <div class="cover-product-img ">
+
+                            <a href="#"> <img src="img/anh1.jpg" alt=""> </a>
+                            <div class="top-sale">
+                                <span class="sale-top-tag">-20%</span>
+                            </div>
+                            <div class="bottom-sale">
+                                <span class="bottom-sale-first"> 10%</span> <span class="bottom-sale-two"> 20%</span>
+
+                            </div>
+                        </div>
+                        <div style="" class="cover-product-content">
+                            <a href="#" style="text-decoration: none"> <span class="product-name-tag"> Usb Kingston Se9 16Gb Đủ Dung Lượng [Chính Hãng] </span>
+                            </a>
+                            <div style="" class="cover-product-price">
+                                <span class="price-main"> 120.000đ  </span>
+                                <span class="price-delete">  120.000đ  </span>
+                            </div>
+                            <div class="cover-product-rating">
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                                <i class="fa is-start fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
 
 <!--End Body-->
 
 
 <!--Footer-->
+<div  style="background: black;padding: 20px 0" class="container-fluid" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="heading-footer" style=""> Doanh nghiệp bình thuận </span>
+                <p>
+                    Là cổng thông tin nhầm hỗ trợ đơn vị doanh nghiệp có thêm công cụ để đưa sản phẩm và dịch vụ đến người tiêu dùng một cách trực quan và hiệu quả nhất.
+                </p>
+            </div>
+            <div class="col-md-4 padd-left">
+                <span class="heading-footer" style=""> Liên kết Website </span>
+                <ul>
+                    <li><a href="">doanhnghiepbinhthuan.com</a> </li>
+                    <li><a href="">doanhnghiepbinhthuan.com</a> </li>
+                </ul>
+            </div>
+            <div class="col-md-4 padd-left  ">
+                <span class="heading-footer" style=""> Danh mục </span>
+                <ul>
+                    <li><a href="">Trang chủ</a> </li>
+                    <li><a href="">Giới thiệu</a> </li>
+                    <li><a href="">Liên hệ</a> </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="border-top: 1px solid #6e6e6e;text-align: center" class="cover-coppy-right">
+            <p style="margin-top: 8px ">Copyright © 2020 Doanh Nghiệp Bình Thuận</p>
+            </div>
+        </div>
+    </div>
 
 
+
+</div>
 
 <!--End Footer-->
 
 <script>
+
+    // document.querySelectorAll('.cover-product').forEach((item)=>{
+    //     item.addEventListener('mouseover',(data)=>{
+    //         console.log("111");
+    //         // data.style.animationName  = 'bounce';
+    //         // data.style.animationDuration = '.4s';
+    //         // data.style.animationIterationCount = 'infinity';
+    //         // data.style.animationFillMode = 'forwards';
+    //         console.log(data);
+    //
+    //
+    //         // animation: bounce;animation-duration: .4s;animation-fill-mode: forwards
+    //     })
+    // })
+
+    // $(".owl-carousel,.about-home-carousel").each(function() {
+    //     $(this).owlCarousel({
+    //         loop:true,
+    //         margin:10,
+    //         dots:true,
+    //         responsive:{
+    //             0:{
+    //                 items:1
+    //             },
+    //             600:{
+    //                 items:1
+    //             },
+    //             1000:{
+    //                 items:1
+    //             }
+    //         }
+    //     })
+    // });
+
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        dots:true,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 10,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 1
             },
-            1000:{
-                items:1
+            1000: {
+                items: 1
             }
         }
+    })
+
+    let arr_bottom_category = document.querySelector('.cover-product-bottom-category').querySelectorAll('p');
+    arr_bottom_category.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            arr_bottom_category.forEach((vl)=>{
+                vl.classList.remove('active');
+            })
+            item.classList.add('active');
+        })
+        item.addEventListener('touchstart',()=>{
+
+            arr_bottom_category.forEach((vl)=>{
+                vl.classList.remove('active');
+            })
+            item.classList.add('active');
+        })
+
+
+    })
+
+    document.querySelector('#btn-login').addEventListener('click',()=>{
+        $("#exampleModal").modal('show');
     })
 
 
