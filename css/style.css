@@ -387,6 +387,26 @@ nav .dropdown-menu li:hover a{
 .login-by-another-btn{
     margin: 16px 0;
 }
+.modal-body{
+    padding: 20px 20%
+}
+.modal{
+    top: 0% !important;
+    background: rgba(0,0,0,0.4);
+}
+.cover-btn-login button{
+    display: block;
+    padding: 10px 0;width: 100%;margin: 20px 0
+}
+.forgot-pw p{
+    text-align: center;margin: 20px 0
+}
+.login-by-another-btn{
+    text-align: center;
+}
+
+
+
 
 
 
@@ -511,7 +531,9 @@ nav .dropdown-menu li:hover a{
     .cover-login-password{
         margin: 10px 0;
     }
-
+    .modal-footer{
+        display: none;
+    }
 
 
 
@@ -557,7 +579,10 @@ nav .dropdown-menu li:hover a{
         justify-content: space-between;
         width: 100%;
     }
-
+    .modal-footer{
+        display: none;
+    }
+    
 
 
 }
